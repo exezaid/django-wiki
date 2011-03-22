@@ -15,10 +15,10 @@ def view_page(request, page_name):
 def edit_page(request, page_name):
   try:
     page = Page.objects.get(pk=page_name)
-    content = page.contents
+    content = page.content
   except Page.DoesNotExist:
     content= ""
-  return render_to_response('edit.html', {'page_name': page_name, 'content';conten})
+  return render_to_response('edit.html', {'page_name': page_name, 'content':content})
 
 def save_page(request, page_name):
   content = request.POST['content']
