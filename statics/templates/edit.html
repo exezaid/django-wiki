@@ -5,7 +5,7 @@
 </head>
 <body>
   <h1>Editing {{page_name}}</h1>
-  <form method="post" action="/wiki/{{page_name}}/save/">
+  <form method="post" action="/wiki/{{page_name}}/save/">{% csrf_token %}
     <textarea id="" name="content" rows="20" cols="60">
       {{content}}
     </textarea><br />
