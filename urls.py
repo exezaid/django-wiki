@@ -13,4 +13,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
+
+    (r'^wiki/(?<page_name>[^/]+)/edit/', 'wiki.views.edit_page'),
+    (r'^wiki/(?<page_name>[^/]+)/save/', 'wiki.views.save_page'),
+    (r'^wiki/(?<page_name>[^/]+)/', 'wiki.views.view_page'),
 )
